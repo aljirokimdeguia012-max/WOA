@@ -24,7 +24,7 @@ body {
 .pass {
     opacity: 50%;
     border-radius: 10px;
-    width: 250px;
+    width: 290px;
     height: 10%;
 }
 .bt1 {
@@ -188,3 +188,4 @@ li {
     #mainContent {
       display: none;
     }
+
