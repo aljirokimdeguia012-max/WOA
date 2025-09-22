@@ -24,7 +24,7 @@ body {
 .pass {
     opacity: 50%;
     border-radius: 10px;
-    width: 290px;
+    width: 250px;
     height: 10%;
 }
 .bt1 {
@@ -37,7 +37,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: left;
     position: absolute;
-    top: 150px;
+    top: 160px;
     color: #c4c4c4;
     font-size: x-large;
 }
@@ -188,4 +188,5 @@ li {
     #mainContent {
       display: none;
     }
+
 
