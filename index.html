@@ -1,43 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PARA SA BABY KUE</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <style>
-        #mainContent {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PARA SA BABY KUE</title>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+
 </head>
 <body>
-    <div class="contain" id="passSection">
-        <div class="container1">
-            <h2 id="passnote">Enter The Passcode Here:</h2>
-            <input type="password" class="pass" id="passInput" required>
-            <button class="bt1" onclick="checkPass()">Enter</button>
-            <p class="note">enter the correct passkey 🤨🤨🤨.</p>
-        </div>
+  <div class="contain" id="passSection">
+    <div class="container1">
+      <h2 id="passnote">Enter The Passcode Here:</h2>
+      <input type="password" class="pass" id="passInput" required />
+      <button class="bt1" onclick="checkPass()">Enter</button>
+      <p class="note">enter the correct passkey 🤨🤨🤨.</p>
     </div>
-    <div id="mainContent">
-        <h1>HAI BE HAHAHAHAHA</h1>
-        <p>LOPIT BA</p>
+  </div>
+
+  <div id="loadingScreen">
+    <div class="spinner"></div>
+    <div class="loading-text">Loading...</div>
+  </div>
+
+  <div id="mainContent">
+    <div id="bgc">
+      <h1>👀👀👀</h1>
     </div>
+    <ul>
+      <li>learn to love yourself, damay mona rin ako syempre HAHAHAHA</li>
+      <li>elibap lambingsol, yung di ako malulungkot</li>
+      <li>cafe na tayo HAHAHAHAHAHA</li>
+      <li>buldak na HAHAHAHA</li>
+      <li>MISS U :<</li>
+    </ul>
+    <div class="img1">
+      <p class="please">please gala na tayo bbq ko dyan HAHAHAHAHA, <br> js kiddin. ingat ikaw palagi!!!</p>
+      <img src="https://i.imgflip.com/27h6hd.jpg" class="i1">
+      <img src="https://i.pinimg.com/originals/2c/9c/20/2c9c20954029da1dec1020493d9b1347.jpg" class="i2">
+    </div>
+  </div>
 
-    <script>
-        function checkPass() {
-            const correctPass = "1nonlyangel";
-            const input = document.getElementById("passInput").value.trim();
+  <script>
+    function checkPass() {
+      const correctPass = "1nonlyangel";
+      const input = document.getElementById("passInput").value.trim();
 
-            if (input === correctPass) {
-                document.getElementById("passSection").style.display = "none";
-                document.getElementById("mainContent").style.display = "block";
-            } else {
-                alert("Incorrect passcode. Please try again.");
-            }
+      document.getElementById("passSection").style.display = "none";
+      document.getElementById("loadingScreen").style.display = "block";
+
+      setTimeout(() => {
+        if (input === correctPass) {
+
+          document.getElementById("loadingScreen").style.display = "none";
+          document.getElementById("mainContent").style.display = "block";
+        } else {
+          document.getElementById("loadingScreen").style.display = "none";
+          document.getElementById("passSection").style.display = "block";
+          document.getElementById("passInput").value = "";
+          alert("Incorrect passcode. Please try again.");
         }
-    </script>
-
+      }, 2000);
+    }
+  </script>
 </body>
 </html>
